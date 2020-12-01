@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
+const Pelicula = require('../models/pelicula')
+
 router.get('/pelicula/add', (req, res) => {
     res.render('pelicula/nueva-pelicula');
 })
 
-router.post('/pelicula/nueva-pelicula', (req, res) => {
+router.post  ('/pelicula/nueva-pelicula', async (req, res) => {
     const { nombre, descripcion, director, genero }= req.body;
     const errors = [];
     if(!nombre) {
@@ -26,15 +28,18 @@ router.post('/pelicula/nueva-pelicula', (req, res) => {
             nombre,
             descripcion,
             director,
-            genero
+            genero,
         });
     }else {
-        res.send('ok')
+       const NewPelicula = new Pelicula({nombre, descripcion, director, genero});
+       await NewPelicula.save();
+       res.redirect('/pelicula')
     }
 });
 
-router.get('/peliculas', (req, res) => {
-    res.send('Funciones del dia');
+router.get('/pelicula', async (req, res) => {
+   const pelicula = await Pelicula.find();
+   res.render('pelicula/all-peliculas', { pelicula })
 })
 
 module.exports = router;
