@@ -6,7 +6,7 @@ const session = require('express-session');
 
 // Inicializaciones
 const app = express();
-
+require('./databese')
 
 // Settings
 app.set('port', process.env.PORT || 7700);
@@ -33,7 +33,7 @@ app.use(session({
 
 // Routes
 app.use(require('./routes/index'))
-app.use(require('./routes/peliculas'))
+app.use(require('./routes/pelicula'))
 app.use(require('./routes/users'))
 
 // Stactic Files

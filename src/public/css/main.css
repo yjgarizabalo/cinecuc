@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.logo-brand {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 22px !important;
+}
+
+.bg-banner-peliculas-sl1 {
+    background: linear-gradient(to right, rgba(3.14%, 14.51%, 40.39%, 1.00) 150px, rgba(7.06%, 20.39%, 50.59%, 0.84) 100%), url('../img/bg-slider-1.jpg') !important;
+    background-position-y: top !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.bg-banner-peliculas-sl2 {
+    background: linear-gradient(to right, rgba(17.25%, 16.47%, 20.78%, 1.00) 150px, rgba(25.49%, 25.10%, 25.88%, 0.84) 100%), url('../img/bg-slider-2.jpg') !important;
+    background-position-y: top !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.bg-banner-peliculas-sl3 {
+    background: linear-gradient(to right, rgba(0.00%, 0.00%, 0.00%, 1.00) 150px, rgba(7.06%, 7.06%, 7.06%, 0.84) 100%), url('../img/bg-slider-3.jpg') !important;
+    background-position-y: top !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.bg-section {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(28,28,28,1) 35%, rgba(50,50,50,1) 100%);
+}
