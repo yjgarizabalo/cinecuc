@@ -1,15 +1,22 @@
-<section class="bg-section">
-    <div class="container container-fluid">
-        <div class="row align-items-center vh-80">
+<section class="bg-section text-white mt-5 pt-5 pb-5" id="cartelera">
+    <div class="container">
+
+        <h2 class="font-weigth-bold pb-3">Funciones | 📽️ <a class="btn btn-primary ml-4" href="pelicula/add">Añadir una Funcion 🎞️</a></h2>
+
+        <div class="row row-cols-1 row-cols-md-5">
             {{#each pelicula}}
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">{{ nombre }}</h4>
-                    </div>
+            <div class="col mb-4">
+                <div class="card border-secundary shadow-sm text-white bg-transparent">
+                <img src="..." class="card-img-top" alt="{{nombre}}" height="230">
+                <div class="card-body">
+                    <h6  class="card-title d-flex justify-content-between align-items-center font-weight-bold">{{nombre}}  <a href="/pelicula/edit/{{_id}}"><i class="far fa-edit"></i></a></h6>
+                    <p><small>{{genero}}</small><br><span class="font-weight-bold"><small>{{director}}</small> <small>Creador</small></span></p>
+                    <a class="btn btn-dark btn-sm shadow-sm">Reservar 🍿</a>
+                </div>
                 </div>
             </div>
             {{/each}}
         </div>
+        
     </div>
 </section>

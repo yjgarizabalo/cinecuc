@@ -1,8 +1,14 @@
-const { randomBytes } = require('crypto');
 const express = require('express');
 const router = express.Router();
 
-const { renderPeliculaForm, crearNuevaPelicula, renderPelicula } = require('../controllers/pelicula.controller')
+// Controllers
+const { renderPeliculaForm, 
+        crearNuevaPelicula, 
+        renderPelicula, 
+        renderEditarPelicula, 
+        updatePelicula, 
+        deletePelicula,
+    } = require('../controllers/pelicula.controller')
 
 // Añadir una pelicula
 router.get('/pelicula/add', renderPeliculaForm)
@@ -11,15 +17,20 @@ router.get('/pelicula/add', renderPeliculaForm)
 router.post('/pelicula/nueva-pelicula', crearNuevaPelicula)
 
 // Ver todas las peliculas
-router.get('/pelicula/all-peliculas', renderPelicula)
+router.get('/pelicula', renderPelicula)
+
+// Editar peliculas
+router.get('/pelicula/edit/:id', renderEditarPelicula)
+
+// Actulizar pelicula
+router.put('/pelicula/edit-pelicula/:id', updatePelicula)
+
+//Eliminar pelicula
+router.delete('pelicula/delete/:id', deletePelicula)
 
 module.exports = router;
 
-// const Pelicula = require('../models/pelicula')
-
 // router.post  ('/pelicula/nueva-pelicula', async (req, res) => {
-//     const { nombre, descripcion, director, genero }= req.body;
-//     const errors = [];
 //     if(!nombre) {
 //         errors.push({text: 'Escribe un nombre'});
 //     }
@@ -41,13 +52,7 @@ module.exports = router;
 //             genero,
 //         });
 //     }else {
-//        const NewPelicula = new Pelicula({nombre, descripcion, director, genero});
-//        await NewPelicula.save();
+
 //        res.redirect('/pelicula')
 //     }
 // });
-
-// router.get('/pelicula', async (req, res) => {
-//    const pelicula = await Pelicula.find();
-//    res.render('pelicula/all-peliculas', { pelicula })
-// })

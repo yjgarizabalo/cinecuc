@@ -2,10 +2,12 @@
 // const methodOverride = require('method-override');
 // const session = require('express-session');
 
-
+const Handlebars = require('handlebars');
 const exphbs = require('express-handlebars');
+const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
 const express = require('express');
 const path = require('path');
+const morgan = require('morgan');
 
 
 // Inicializaciones
@@ -20,11 +22,13 @@ app.engine('.hbs', exphbs({
     layoutsDir: path.join(app.get('views'), 'layouts'),
     partialsDir: path.join(app.get('views'), 'partials'),
     extname: '.hbs',
+    handlebars : allowInsecurePrototypeAccess(Handlebars),
 }));
 app.set('view engine', '.hbs');
 
 // Middlewares
 app.use(express.urlencoded({extended: false}));
+// app.use(morgan('morgan'))
 // app.use(methodOverride('_method'));
 // app.use(session({
 //     secret: 'cinecucapp',
