@@ -38,7 +38,7 @@ app.use(express.urlencoded({extended: false}));
 // Rutas
 
 app.use(require('./routes/index'))
-// app.use(require('./routes/pelicula'))
+app.use(require('./routes/pelicula'))
 // app.use(require('./routes/users'))
 
 // archivos estaticos

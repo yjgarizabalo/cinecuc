@@ -1,11 +1,21 @@
-// const express = require('express');
-// const router = express.Router();
+const { randomBytes } = require('crypto');
+const express = require('express');
+const router = express.Router();
+
+const { renderPeliculaForm, crearNuevaPelicula, renderPelicula } = require('../controllers/pelicula.controller')
+
+// Añadir una pelicula
+router.get('/pelicula/add', renderPeliculaForm)
+
+// Crear una nueva pelicula
+router.post('/pelicula/nueva-pelicula', crearNuevaPelicula)
+
+// Ver todas las peliculas
+router.get('/pelicula/all-peliculas', renderPelicula)
+
+module.exports = router;
 
 // const Pelicula = require('../models/pelicula')
-
-// router.get('/pelicula/add', (req, res) => {
-//     res.render('pelicula/nueva-pelicula');
-// })
 
 // router.post  ('/pelicula/nueva-pelicula', async (req, res) => {
 //     const { nombre, descripcion, director, genero }= req.body;
@@ -41,5 +51,3 @@
 //    const pelicula = await Pelicula.find();
 //    res.render('pelicula/all-peliculas', { pelicula })
 // })
-
-// module.exports = router;
