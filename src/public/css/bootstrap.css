@@ -60,7 +60,8 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(28,28,28,1) 35%, rgba(50,50,50,1) 100%);
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {

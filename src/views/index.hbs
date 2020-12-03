@@ -9,15 +9,15 @@
     <div class="carousel-item">
         <div class="container-fluid bg-banner-peliculas-sl1 ">
             <div class="container">
-                <div class="row text-white p-4 vh-80 align-items-center">
+                <div class="row text-white p-4 vh-90 align-items-center">
                     <div class="col-sm-6 text-center">
-                        <img class="img-fluid" src="../img/pelicula-1.jpg" alt="Mandalorian" width="200">
+                        <img class="img-fluid" src="../img/pelicula-1.jpg" alt="Mandalorian" width="250">
                     </div>
                     <div class="col-sm-6">
                         <h1 class="font-weight-bold display-5 title-web-slider title-web-slider">The Mandalorian (2019)</h1>
                         <p class="lead">TV-14 Sci-Fi Fantasy, Action Adventure, Western | 35m</p>
-                        <h3 class="font-weight-bold">Vista general</h3>
-                        <p><small>Ambientada tras la caída del Imperio y antes de la aparición de la Primera Orden, la serie sigue los pasos de Mando, un cazarrecompensas perteneciente a la legendaria tribu de los Mandalorian, un pistolero solitario que trabaja en los confines de la galaxia, donde no alcanza la autoridad de la Nueva República.</small></p>
+                        <h4 class="font-weight-bold">Vista general</h4>
+                        <p><small>Ambientada tras la caída del Imperio y antes de la aparición de la Primera Orden, la serie sigue los pasos de Mando, un cazarrecompensas perteneciente a la legendaria tribu de los Mandalorian....</small></p>
                         <p class="font-weight-bold">Jon Favreau <br><small>Creador</small></p>
                         <a class="btn btn-dark btn-lg shadow-sm">Reservar Funcion 🍿</a>
                     </div>
@@ -28,15 +28,15 @@
     <div class="carousel-item">
         <div class="container-fluid bg-banner-peliculas-sl2">
             <div class="container">
-                <div class="row text-white p-4 vh-80 align-items-center">
+                <div class="row text-white p-4 vh-90 align-items-center">
                     <div class="col-sm-6 text-center">
-                        <img class="img-fluid" src="../img/pelicula-2.jpg" alt="Los100" width="200">
+                        <img class="img-fluid" src="../img/pelicula-2.jpg" alt="Los100" width="250">
                     </div>
                     <div class="col-sm-6">
                         <h1 class="font-weight-bold display-5 title-web-slider title-web-slider">Los 100 (2014)</h1>
                         <p class="lead">TV-14 Sci-Fi  Fantasy, Drama, Action Adventure | 43m</p>
-                        <h3 class="font-weight-bold">Vista general</h3>
-                        <p><small>Situada 97 años después de una guerra nuclear que ha destruido la civilización, los supervivientes de una nave espacial, que han sobrevivido durante 3 generaciones en el espacio, envían 100 delincuentes juveniles "para testear" las condiciones de la Tierra, con la esperanza de eventualmente volver a poblar el planeta.</small></p>
+                        <h4 class="font-weight-bold">Vista general</h4>
+                        <p><small>Situada 97 años después de una guerra nuclear que ha destruido la civilización, los supervivientes de una nave espacial, que han sobrevivido durante 3 generaciones en el espacio...</small></p>
                         <p class="font-weight-bold">Jason Rothenberg <br><small>Creador</small></p>
                         <a class="btn btn-dark btn-lg shadow-sm">Reservar Funcion 🍿</a>
                     </div>
@@ -47,15 +47,15 @@
     <div class="carousel-item active">
         <div class="container-fluid bg-banner-peliculas-sl3 ">
             <div class="container">
-                <div class="row text-white p-4 vh-80 align-items-center">
+                <div class="row text-white p-4 vh-90 align-items-center">
                     <div class="col-sm-6 text-center">
-                        <img class="img-fluid" src="../img/pelicula-3.jpg" alt="Odisea en el espacio" width="200">
+                        <img class="img-fluid" src="../img/pelicula-3.jpg" alt="Odisea en el espacio" width="250">
                     </div>
                     <div class="col-sm-6">
                         <h1 class="font-weight-bold display-5 title-web-slider title-web-slider">2001: Una odisea del espacio (1968)</h1>
                         <p class="lead">10/4/1968 (US) Ciencia ficción, Misterio, Aventura | 2h 21m</p>
-                        <h3 class="font-weight-bold">Vista general</h3>
-                        <p><small>La historia de la humanidad, en diversos estadios del pasado y del futuro, es narrada en la película de ciencia-ficción de culto por excelencia de la historia del cine. Hace millones de años, en los albores del nacimiento del homo sapiens, unos simios descubren un monolito que les lleva a un estadio de inteligencia superior. </small></p>
+                        <h4 class="font-weight-bold">Vista general</h4>
+                        <p><small>La historia de la humanidad, en diversos estadios del pasado y del futuro, es narrada en la película de ciencia-ficción de culto por excelencia de la historia del cine. Hace millones de años...</small></p>
                         <p class="font-weight-bold">Stanley Kubrick <br><small>Creador</small></p>
                         <a class="btn btn-dark btn-lg shadow-sm">Reservar Funcion 🍿</a>
                     </div>
@@ -76,18 +76,65 @@
 {{!-- end hero cinecuc --}}
 
 {{!-- funciones --}}
-<section class="bg-section">
+<section class="bg-section text-white pt-5 pb-5" id="cartelera">
     <div class="container container-fluid">
+         <h2 class="font-weigth-bold pb-3">Cartelera | 📽️</h2>
         <div class="row align-items-center vh-80">
-            {{#each pelicula}}
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">{{nombre}}</h4>
-                    </div>
+            <div class="col-md">
+                <div class="card border-secundary shadow-sm text-white bg-transparent" style="width: auto;">
+                <img src="../img/pelicula-1.jpg" class="card-img-top" height="250" alt="mandalorian">
+                <div class="card-body">
+                    <h6 class="font-weight-bold">The Mandalorian</h6>
+                    <p><small>Fantasy, Action Adventure, Western | 35m</small><br><span class="font-weight-bold"><small>Jon Favreau</small> <small>Creador</small></span></p>
+    
+                    <a class="btn btn-dark btn-sm shadow-sm">Reservar 🍿</a>
+                </div>
                 </div>
             </div>
-            {{/each}}
+            <div class="col-md">
+                <div class="card border-secundary shadow-sm text-white bg-transparent" style="width: auto;">
+                <img src="../img/pelicula-2.jpg" class="card-img-top" height="250" alt="Los 100">
+                <div class="card-body">
+                    <h6 class="font-weight-bold">Los 100</h6>
+                    <p><small>Fantasy, Drama, Action Adventure | 43m</small><br><span class="font-weight-bold"><small>Jason Rothenberg</small> <small>Creador</small></span></p>
+    
+                    <a class="btn btn-dark btn-sm shadow-sm">Reservar 🍿</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="card border-secundary shadow-sm text-white bg-transparent" style="width: auto;">
+                <img src="../img/pelicula-3.jpg" class="card-img-top" height="250" alt="mandalorian">
+                <div class="card-body">
+                    <h6 class="font-weight-bold">2001</h6>
+                    <p><small>Ciencia ficción, Misterio, Aventura | 2h 21m</small><br><span class="font-weight-bold"><small>Stanley Kubrick</small> <small>Creador</small></span></p>
+    
+                    <a class="btn btn-dark btn-sm shadow-sm">Reservar 🍿</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="card border-secundary shadow-sm text-white bg-transparent" style="width: auto;">
+                <img src="../img/pelicula-4.jpg" class="card-img-top" height="250" alt="mandalorian">
+                <div class="card-body">
+                    <h6 class="font-weight-bold">Interstellar</h6>
+                    <p><small>Aventura, Drama, Ciencia ficción | 2h 49m</small><br><span class="font-weight-bold"><small>Christopher Nolan</small> <small>Creador</small></span></p>
+    
+                    <a class="btn btn-dark btn-sm shadow-sm">Reservar 🍿</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="card border-secundary shadow-sm text-white bg-transparent" style="width: auto;">
+                <img src="../img/pelicula-5.jpg" class="card-img-top" height="250" alt="mandalorian">
+                <div class="card-body">
+                    <h6 class="font-weight-bold">13 horas</h6>
+                    <p><small>Acción, Historia, Suspense, Drama | 2h 24m</small><br><span class="font-weight-bold"><small>Michael Bay</small> <small>Creador</small></span></p>
+    
+                    <a class="btn btn-dark btn-sm shadow-sm">Reservar 🍿</a>
+                </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const {Schema} = mongoose;
+// const mongoose = require('mongoose');
+const {Schema, model} = mongoose;
 
 const PeliculaSchema = new Schema({
     nombre: {type: String, required: true},
@@ -7,6 +7,8 @@ const PeliculaSchema = new Schema({
     director: {type: String, required: true},
     genero: {type: String, required: true},
     date: { type: Date, default: Date.now }
+}, {
+    timestamps: true
 })
 
-module.exports = mongoose.model('Pelicula', PeliculaSchema)
+module.exports = model('Pelicula', PeliculaSchema)

@@ -23,9 +23,16 @@
 
 .bg-banner-peliculas-sl3 {
     background: linear-gradient(to right, rgba(0.00%, 0.00%, 0.00%, 1.00) 150px, rgba(7.06%, 7.06%, 7.06%, 0.84) 100%), url('../img/bg-slider-3.jpg') !important;
-    background-position-y: top !important;
+
     background-size: cover !important;
     background-repeat: no-repeat !important;
+}
+
+.bg-banner-peliculas-sl4{
+    background: linear-gradient(to right, rgba(30.59%, 34.12%, 36.08%, 1.00) 150px, rgba(7.45%, 10.20%, 13.33%, 0.84) 100%), url('../img/bg-slider-4.jpg') !important;
+    background-position-y: top !important;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .bg-section {
