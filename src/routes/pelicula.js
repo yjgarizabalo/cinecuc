@@ -26,7 +26,7 @@ router.get('/pelicula/edit/:id', renderEditarPelicula)
 router.put('/pelicula/edit-pelicula/:id', updatePelicula)
 
 //Eliminar pelicula
-router.delete('pelicula/delete/:id', deletePelicula)
+router.delete('/pelicula/delete/:id', deletePelicula)
 
 module.exports = router;
 

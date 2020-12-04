@@ -1,5 +1,5 @@
 // const express = require('express');
-// const methodOverride = require('method-override');
+
 // const session = require('express-session');
 
 const Handlebars = require('handlebars');
@@ -8,6 +8,7 @@ const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-acce
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
+const methodOverride = require('method-override');
 
 
 // Inicializaciones
@@ -27,9 +28,9 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs');
 
 // Middlewares
+app.use(morgan("dev"));
 app.use(express.urlencoded({extended: false}));
-// app.use(morgan('morgan'))
-// app.use(methodOverride('_method'));
+app.use(methodOverride("_method"));
 // app.use(session({
 //     secret: 'cinecucapp',
 //     resave: true,

@@ -1,0 +1,31 @@
+<section class="bg-section text-white mt-5 pt-5 pb-5" id="cartelera">
+    <div class="container">
+        <h2 class="font-weigth-bold pb-3">Editar Funcion | 📽️ <a class="btn btn-primary ml-4" href="pelicula/add">Añadir una Funcion 🎞️</a></h2>
+        <div class="col-md-4">
+            <div class="card border-secundary shadow-sm text-white bg-transparent">
+            <div class="card-body">
+                <form action="/pelicula/edit/{{pelicula.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="form-group">
+                    <input name="nombre" type="text" class="form-control" placeholder="Nombre" value="{{pelicula.nombre}}">
+                </div>
+                <div class="form-group">
+                    <input name="descripcion" type="text" class="form-control" placeholder="Descripcion" value="{{pelicula.descripcion}}">
+                </div>
+                <div class="form-group">
+                    <input name="director" type="text" class="form-control" placeholder="Director" value="{{pelicula.director}}">
+                </div>
+                <div class="form-group">
+                    <input name="genero" type="text" class="form-control" placeholder="Genero" value="{{pelicula.director}}">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">
+                        Guardar
+                    </button>
+                </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
